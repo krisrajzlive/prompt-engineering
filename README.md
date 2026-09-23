@@ -38,6 +38,8 @@ python main.py 6          # run a specific demo directly
 | 10 | [demos/do_10_lcel_chains.py](demos/do_10_lcel_chains.py) | LCEL `\|` composition, `RunnableLambda`/`Parallel`/`Passthrough` |
 | 11 | [demos/do_11_multi_provider_prompting.py](demos/do_11_multi_provider_prompting.py) | Same prompt run against OpenAI, Hugging Face, and Ollama |
 | 12 | [demos/do_12_langsmith_tracing.py](demos/do_12_langsmith_tracing.py) | LangSmith tracing with `@traceable` |
+| 13 | [demos/do_13_tool_calling.py](demos/do_13_tool_calling.py) | `@tool`, `bind_tools`, reading `tool_calls`, feeding results back via `ToolMessage` |
+| 14 | [demos/do_14_simple_rag.py](demos/do_14_simple_rag.py) | Minimal RAG: FAISS retriever + `RunnableParallel` in an LCEL chain |
 
 ## Layout
 

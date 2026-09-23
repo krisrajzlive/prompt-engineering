@@ -21,6 +21,8 @@ DEMOS = {
     "10": ("LCEL chains: RunnableLambda/Parallel/Passthrough", "demos.do_10_lcel_chains"),
     "11": ("Prompt portability across OpenAI/HuggingFace/Ollama", "demos.do_11_multi_provider_prompting"),
     "12": ("LangSmith tracing", "demos.do_12_langsmith_tracing"),
+    "13": ("Tool calling: bind_tools + tool_calls loop", "demos.do_13_tool_calling"),
+    "14": ("Simple RAG: retriever + LCEL chain", "demos.do_14_simple_rag"),
 }
 
 
