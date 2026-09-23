@@ -31,7 +31,7 @@ python main.py 6          # run a specific demo directly
 | 3 | [demos/do_03_few_shot_prompting.py](demos/do_03_few_shot_prompting.py) | One-shot vs few-shot via `FewShotPromptTemplate`, `FewShotChatMessagePromptTemplate` |
 | 4 | [demos/do_04_example_selectors.py](demos/do_04_example_selectors.py) | `SemanticSimilarityExampleSelector` + FAISS for dynamic few-shot |
 | 5 | [demos/do_05_partial_and_composed_prompts.py](demos/do_05_partial_and_composed_prompts.py) | `.partial()` (static + callable), composing prompts from fragments |
-| 6 | [demos/do_06_prompt_engineering_techniques.py](demos/do_06_prompt_engineering_techniques.py) | zero-shot vs few-shot vs zero-shot-CoT vs few-shot-CoT vs role-based prompting |
+| 6 | [demos/do_06_prompt_engineering_techniques.py](demos/do_06_prompt_engineering_techniques.py) | zero-shot vs few-shot vs chain-of-thought vs role-based prompting |
 | 7 | [demos/do_07_output_parsers.py](demos/do_07_output_parsers.py) | `StrOutputParser`, list/JSON/Pydantic output parsers |
 | 8 | [demos/do_08_structured_output.py](demos/do_08_structured_output.py) | `with_structured_output()` with a Pydantic schema |
 | 9 | [demos/do_09_invocation_methods.py](demos/do_09_invocation_methods.py) | `invoke`/`batch`/`stream`/`ainvoke`/`abatch`/`astream` |
