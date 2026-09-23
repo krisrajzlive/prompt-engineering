@@ -11,7 +11,7 @@ import sys
 DEMOS = {
     "1": ("Prompt templates: PromptTemplate vs ChatPromptTemplate", "demos.do_01_prompt_templates"),
     "2": ("Message types + MessagesPlaceholder (chat history)", "demos.do_02_message_types"),
-    "3": ("Few-shot prompting (text + chat style)", "demos.do_03_few_shot_prompting"),
+    "3": ("One-shot vs few-shot prompting (text + chat style)", "demos.do_03_few_shot_prompting"),
     "4": ("Example selectors (semantic similarity)", "demos.do_04_example_selectors"),
     "5": ("Partial variables + composed prompts", "demos.do_05_partial_and_composed_prompts"),
     "6": ("Zero-shot vs few-shot vs CoT vs role-based prompting", "demos.do_06_prompt_engineering_techniques"),

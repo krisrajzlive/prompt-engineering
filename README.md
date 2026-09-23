@@ -28,7 +28,7 @@ python main.py 6          # run a specific demo directly
 |---|------|--------|
 | 1 | [demos/do_01_prompt_templates.py](demos/do_01_prompt_templates.py) | `PromptTemplate` vs `ChatPromptTemplate`, f-string vs jinja2 formats |
 | 2 | [demos/do_02_message_types.py](demos/do_02_message_types.py) | `SystemMessage`/`HumanMessage`/`AIMessage`, `MessagesPlaceholder` for history |
-| 3 | [demos/do_03_few_shot_prompting.py](demos/do_03_few_shot_prompting.py) | `FewShotPromptTemplate`, `FewShotChatMessagePromptTemplate` |
+| 3 | [demos/do_03_few_shot_prompting.py](demos/do_03_few_shot_prompting.py) | One-shot vs few-shot via `FewShotPromptTemplate`, `FewShotChatMessagePromptTemplate` |
 | 4 | [demos/do_04_example_selectors.py](demos/do_04_example_selectors.py) | `SemanticSimilarityExampleSelector` + FAISS for dynamic few-shot |
 | 5 | [demos/do_05_partial_and_composed_prompts.py](demos/do_05_partial_and_composed_prompts.py) | `.partial()` (static + callable), composing prompts from fragments |
 | 6 | [demos/do_06_prompt_engineering_techniques.py](demos/do_06_prompt_engineering_techniques.py) | zero-shot vs few-shot vs chain-of-thought vs role-based prompting |
