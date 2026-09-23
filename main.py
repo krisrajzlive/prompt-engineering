@@ -14,7 +14,7 @@ DEMOS = {
     "3": ("One-shot vs few-shot prompting (text + chat style)", "demos.do_03_few_shot_prompting"),
     "4": ("Example selectors (semantic similarity)", "demos.do_04_example_selectors"),
     "5": ("Partial variables + composed prompts", "demos.do_05_partial_and_composed_prompts"),
-    "6": ("Zero-shot vs few-shot vs CoT vs role-based prompting", "demos.do_06_prompt_engineering_techniques"),
+    "6": ("Zero/few-shot vs zero/few-shot-CoT vs role-based prompting", "demos.do_06_prompt_engineering_techniques"),
     "7": ("Output parsers (str/list/json/pydantic)", "demos.do_07_output_parsers"),
     "8": ("Structured output via with_structured_output", "demos.do_08_structured_output"),
     "9": ("Invocation methods: invoke/batch/stream/async", "demos.do_09_invocation_methods"),
