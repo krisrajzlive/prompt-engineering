@@ -40,6 +40,7 @@ python main.py 6          # run a specific demo directly
 | 12 | [demos/do_12_langsmith_tracing.py](demos/do_12_langsmith_tracing.py) | LangSmith tracing with `@traceable` |
 | 13 | [demos/do_13_tool_calling.py](demos/do_13_tool_calling.py) | `@tool`, `bind_tools`, reading `tool_calls`, feeding results back via `ToolMessage` |
 | 14 | [demos/do_14_simple_rag.py](demos/do_14_simple_rag.py) | Minimal RAG: FAISS retriever + `RunnableParallel` in an LCEL chain |
+| 15 | [demos/do_15_response_anatomy.py](demos/do_15_response_anatomy.py) | What's inside an `AIMessage`: content, usage_metadata, tool_calls, response_metadata, streaming chunks |
 
 ## Layout
 

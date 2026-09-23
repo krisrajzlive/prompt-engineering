@@ -23,6 +23,7 @@ DEMOS = {
     "12": ("LangSmith tracing", "demos.do_12_langsmith_tracing"),
     "13": ("Tool calling: bind_tools + tool_calls loop", "demos.do_13_tool_calling"),
     "14": ("Simple RAG: retriever + LCEL chain", "demos.do_14_simple_rag"),
+    "15": ("Response anatomy: AIMessage fields (content/usage/tool_calls/...)", "demos.do_15_response_anatomy"),
 }
 
 
