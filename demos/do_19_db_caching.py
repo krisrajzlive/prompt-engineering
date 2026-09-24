@@ -15,10 +15,20 @@ disposable one via `docker run -d -p 6380:6379 redis:7`, kept separate
 from port 6379 to avoid clashing with any other Redis already running
 locally). If nothing is listening there, this fails fast with a clear
 connection error rather than silently falling back to no caching.
+
+LangSmith tracing is disabled for this script specifically: its
+background flush thread can throw a harmless but noisy
+"can't create new thread at interpreter shutdown" RuntimeError right as
+a short-lived script like this one exits. Must happen before `core` is
+imported, since `core.get_model()` reads LANGSMITH_TRACING from the
+environment via python-dotenv (which never overrides a var already set).
 """
 
+import os
 import time
 import warnings
+
+os.environ["LANGSMITH_TRACING"] = "false"
 
 import redis
 from langchain_community.cache import RedisCache

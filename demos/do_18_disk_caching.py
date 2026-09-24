@@ -13,11 +13,21 @@ that's the part `InMemoryCache` can never do, since it starts empty every
 run. `langchain_community`'s internal (de)serializer emits a pending-
 deprecation warning unrelated to caching itself; suppressed below since
 it's noise for this demo, not something this code can configure away.
+
+LangSmith tracing is disabled for this script specifically: its
+background flush thread can throw a harmless but noisy
+"can't create new thread at interpreter shutdown" RuntimeError right as
+a short-lived script like this one exits. Must happen before `core` is
+imported, since `core.get_model()` reads LANGSMITH_TRACING from the
+environment via python-dotenv (which never overrides a var already set).
 """
 
+import os
 import time
 import warnings
 from pathlib import Path
+
+os.environ["LANGSMITH_TRACING"] = "false"
 
 from langchain_community.cache import SQLiteCache
 from langchain_core._api.deprecation import LangChainPendingDeprecationWarning
