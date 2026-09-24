@@ -24,6 +24,7 @@ DEMOS = {
     "13": ("Tool calling: bind_tools + tool_calls loop", "demos.do_13_tool_calling"),
     "14": ("Simple RAG: retriever + LCEL chain", "demos.do_14_simple_rag"),
     "15": ("Response anatomy: AIMessage fields (content/usage/tool_calls/...)", "demos.do_15_response_anatomy"),
+    "16": ("Prompt chaining: sequential LLM calls, manual + LCEL-piped", "demos.do_16_prompt_chaining"),
 }
 
 
