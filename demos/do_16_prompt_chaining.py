@@ -61,23 +61,25 @@ def main() -> None:
     final = (TIGHTEN_PROMPT | model | parser).invoke({"draft": draft})
     print(final)
 
-    # --- Same pipeline as one piped LCEL chain. Each lambda's parameter
-    #     (e.g. `parser_output`) is a fresh local name bound to whatever the
-    #     PRECEDING pipe stage just produced — it does NOT refer to the
+    # --- Same pipeline as one piped LCEL chain. Each lambda's parameter is
+    #     a fresh local name, scoped to that lambda only, bound to whatever
+    #     the PRECEDING pipe stage just produced — it does NOT refer to the
     #     `claims`/`draft` variables above; those only exist in the manual
-    #     version. The lambda's only job is to wrap that string into the
-    #     dict shape the next prompt's {variable} expects. Less visible
-    #     mid-chain than the manual version, but composes into a single
-    #     Runnable you can .batch() or .stream() as one unit. ---
+    #     version. Named distinctly per step (extracted_claims vs
+    #     drafted_rebuttal) since they hold different text, even though
+    #     both lambdas do the same job: wrap a string into the dict shape
+    #     the next prompt's {variable} expects. Less visible mid-chain than
+    #     the manual version, but composes into a single Runnable you can
+    #     .batch() or .stream() as one unit. ---
     chained = (
         EXTRACT_PROMPT
         | model
         | parser
-        | (lambda parser_output: {"claims": parser_output})
+        | (lambda extracted_claims: {"claims": extracted_claims})
         | DRAFT_PROMPT
         | model
         | parser
-        | (lambda parser_output: {"draft": parser_output})
+        | (lambda drafted_rebuttal: {"draft": drafted_rebuttal})
         | TIGHTEN_PROMPT
         | model
         | parser
