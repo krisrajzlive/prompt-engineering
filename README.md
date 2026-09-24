@@ -42,6 +42,7 @@ python main.py 6          # run a specific demo directly
 | 14 | [demos/do_14_simple_rag.py](demos/do_14_simple_rag.py) | Minimal RAG: FAISS retriever + `RunnableParallel` in an LCEL chain |
 | 15 | [demos/do_15_response_anatomy.py](demos/do_15_response_anatomy.py) | What's inside an `AIMessage`: content, usage_metadata, tool_calls, response_metadata, streaming chunks |
 | 16 | [demos/do_16_prompt_chaining.py](demos/do_16_prompt_chaining.py) | Prompt chaining: extract → draft → tighten across 3 sequential LLM calls, manual + LCEL-piped |
+| 17 | [demos/do_17_response_caching.py](demos/do_17_response_caching.py) | Response caching: `set_llm_cache`/`InMemoryCache`, cache hit vs miss timing |
 
 ## Layout
 
