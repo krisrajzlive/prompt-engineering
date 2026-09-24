@@ -45,6 +45,12 @@ def main() -> None:
         original_length=RunnableLambda(lambda x: len(x["text"])),  # derives a value from input -> 186
         original=RunnablePassthrough(),  # echoes input back unchanged -> {"text": "LangChain's Expr..."}
     )
+    # result shape:
+    # {
+    #     "summary": "...",
+    #     "original_length": 186,
+    #     "original": {"text": "LangChain's Expression Language..."},
+    # }
     print("\n--- RunnableParallel (summary + metadata + passthrough) ---")
     result = with_metadata.invoke({"text": text})
     print("Summary:", result["summary"])
