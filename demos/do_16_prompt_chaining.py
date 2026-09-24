@@ -74,12 +74,12 @@ def main() -> None:
     chained = (
         EXTRACT_PROMPT
         | model
-        | parser
-        | (lambda extracted_claims: {"claims": extracted_claims})
+        | parser # produces plain string response
+        | (lambda extracted_claims: {"claims": extracted_claims}) # reshaping response
         | DRAFT_PROMPT
         | model
-        | parser
-        | (lambda drafted_rebuttal: {"draft": drafted_rebuttal})
+        | parser  # produces plain string response
+        | (lambda drafted_rebuttal: {"draft": drafted_rebuttal})  # reshaping response
         | TIGHTEN_PROMPT
         | model
         | parser
