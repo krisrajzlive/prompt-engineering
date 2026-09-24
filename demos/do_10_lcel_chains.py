@@ -41,9 +41,9 @@ def main() -> None:
     # 3. RunnablePassthrough: carry the original input alongside a derived value,
     #    e.g. returning both the summary and the original text length.
     with_metadata = RunnableParallel(
-        summary=summarize_chain,  # runs the input through prompt|model|parser -> new summary string
-        original_length=RunnableLambda(lambda x: len(x["text"])),  # derives a value from the input -> int
-        original=RunnablePassthrough(),  # echoes the input back unchanged -> same {"text": text} dict
+        summary=summarize_chain,  # runs input through prompt|model|parser -> "LangChain lets you..."
+        original_length=RunnableLambda(lambda x: len(x["text"])),  # derives a value from input -> 186
+        original=RunnablePassthrough(),  # echoes input back unchanged -> {"text": "LangChain's Expr..."}
     )
     print("\n--- RunnableParallel (summary + metadata + passthrough) ---")
     result = with_metadata.invoke({"text": text})
