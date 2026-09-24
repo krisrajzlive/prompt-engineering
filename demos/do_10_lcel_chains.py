@@ -1,7 +1,8 @@
 """LCEL (LangChain Expression Language): composing prompts with `|`.
 
 `prompt | model | parser` is itself a `Runnable`, built by piping smaller
-Runnables together. `RunnablePassthrough` forwards a value unchanged (handy
+Runnables together. 
+`RunnablePassthrough` forwards a value unchanged (handy
 for keeping the original input alongside a transformed one),
 `RunnableLambda` wraps a plain Python function as a pipeline step, and
 `RunnableParallel` fans one input out to several branches at once.

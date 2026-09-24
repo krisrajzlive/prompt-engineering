@@ -75,11 +75,11 @@ def main() -> None:
         EXTRACT_PROMPT
         | model
         | parser # produces plain string response
-        | (lambda extracted_claims: {"claims": extracted_claims}) # reshaping response
+        | (lambda extracted_claims: {"claims": extracted_claims}) # reshaping str response of parser as dict, extracted_claims is placeholder
         | DRAFT_PROMPT
         | model
         | parser  # produces plain string response
-        | (lambda drafted_rebuttal: {"draft": drafted_rebuttal})  # reshaping response
+        | (lambda drafted_rebuttal: {"draft": drafted_rebuttal})  # reshaping str response of parser as dict, drafted_rebuttal is placeholder
         | TIGHTEN_PROMPT
         | model
         | parser
