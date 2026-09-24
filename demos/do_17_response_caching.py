@@ -1,4 +1,4 @@
-"""Response caching: LangChain memoizes (prompt, params) -> output.
+"""Response caching (in-memory): LangChain memoizes (prompt, params) -> output.
 
 Note the distinction: this is LangChain's *response* cache — an exact
 match on prompt + model params is served from memory instead of calling
@@ -10,10 +10,10 @@ in between.
 
 `set_llm_cache(...)` installs a cache globally, for every model instance
 in the process, not per-model. `InMemoryCache` (used below) is the
-simplest backend -- a dict in RAM, cleared on process exit. LangChain also
-ships persistent backends (e.g. `SQLiteCache` in `langchain_community`,
-currently in maintenance mode) that survive across process restarts --
-same `set_llm_cache()` call, just a different backend object passed in.
+simplest backend -- a dict in RAM, cleared on process exit. See
+demos/do_18_disk_caching.py for a persistent, file-backed cache, and
+demos/do_19_db_caching.py for a shared, database-backed cache -- same
+`set_llm_cache()` call each time, just a different backend object.
 """
 
 import time

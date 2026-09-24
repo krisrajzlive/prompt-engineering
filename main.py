@@ -25,7 +25,9 @@ DEMOS = {
     "14": ("Simple RAG: retriever + LCEL chain", "demos.do_14_simple_rag"),
     "15": ("Response anatomy: AIMessage fields (content/usage/tool_calls/...)", "demos.do_15_response_anatomy"),
     "16": ("Prompt chaining: sequential LLM calls, manual + LCEL-piped", "demos.do_16_prompt_chaining"),
-    "17": ("Response caching: set_llm_cache/InMemoryCache, timing evidence", "demos.do_17_response_caching"),
+    "17": ("Response caching (in-memory): set_llm_cache/InMemoryCache", "demos.do_17_response_caching"),
+    "18": ("Response caching (disk): SQLiteCache, survives process restarts", "demos.do_18_disk_caching"),
+    "19": ("Response caching (db): RedisCache, shared across processes", "demos.do_19_db_caching"),
 }
 
 
